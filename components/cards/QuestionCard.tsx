@@ -45,8 +45,6 @@ const QuestionCard = ({
             </h3>
           </Link>
         </div>
-
-        {/* If signed in add edit delete actions */}
       </div>
 
       <div className="mt-3.5 flex flex-wrap gap-2">
