@@ -5,9 +5,22 @@ import RenderTag from "./RenderTag";
 
 const RightSidebar = () => {
   const data = [
-    "Would it be appropriate to point out an error in another paper during a referee report?",
-    "How to deal with a situation where following the rules is made very difficult?",
-    "Low digit addition generator",
+    {
+      key: 1,
+      value:
+        "How to deal with a situation where following the rules is made very difficult?",
+    },
+    { key: 2, value: "Low digit addition generator" },
+    {
+      key: 3,
+      value:
+        "Would it be appropriate to point out an error in another paper during a referee report?",
+    },
+    {
+      key: 4,
+      value:
+        "How to deal with a situation where following the rules is made very difficult?",
+    },
   ];
 
   const popularTags = [
@@ -21,10 +34,10 @@ const RightSidebar = () => {
   return (
     <section
       className="custom-scrollbar background-light900_dark200 
-      sticky rigth-0 top-0 flex flex-col
+      rigth-0 light-border sticky top-0 flex
        h-screen w-[340px]
-       overflow-y-auto p-6 pt-36
-       light-border border-l shadow-light-300 dark:shadow-none
+       flex-col overflow-y-auto border-l
+       p-6 pt-36 shadow-light-300 dark:shadow-none
       max-xl:hidden"
     >
       <div>
@@ -34,9 +47,12 @@ const RightSidebar = () => {
             return (
               <Link
                 href="/"
-                className="flex flex-row cursor-pointer items-center justify-between gap-1"
+                className="flex cursor-pointer flex-row items-center justify-between gap-1"
+                key={item.key}
               >
-                <p className="body-medium text-dark500_light700">{item}</p>
+                <p className="body-medium text-dark500_light700">
+                  {item.value}
+                </p>
                 <Image
                   src="/assets/icons/chevron-right.svg"
                   alt="stackoverflow"

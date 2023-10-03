@@ -5,7 +5,7 @@ import Image from "next/image";
 import { SignedIn, UserButton } from "@clerk/clerk-react";
 import Theme from "@/components/shared/navbar/Theme";
 import MobileNav from "@/components/shared/navbar/MobileNav";
-import GlobalSearch from "@/components/shared/search/GlobalSearch";
+import GlobalSearchBar from "@/components/shared/search/GlobalSearchBar";
 
 const Navbar = () => {
   return (
@@ -17,11 +17,11 @@ const Navbar = () => {
           width={23}
           height={23}
         />
-        <p className="h2-bold font-spaceGrotesk text-dark-100 dark:text-light-900 mx-sm:hidden">
+        <p className="h2-bold mx-sm:hidden font-spaceGrotesk text-dark-100 dark:text-light-900">
           Dev <span className="text-primary-500">Overflow</span>
         </p>
       </Link>
-      <GlobalSearch />
+      <GlobalSearchBar />
       <div className="flex-between gap-5">
         <Theme />
         <SignedIn>

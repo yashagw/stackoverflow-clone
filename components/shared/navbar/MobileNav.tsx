@@ -22,7 +22,7 @@ const NavContent = () => {
           (pathname.includes(item.route) && item.route.length > 1) ||
           pathname === item.route;
         return (
-          <SheetClose asChild>
+          <SheetClose key={item.route} asChild>
             <Link
               href={item.route}
               className={`${
@@ -98,7 +98,7 @@ const MobileNav = () => {
                 <Link href="/sign-up">
                   <Button
                     className="small-medium light-border-2 btn-tertiary
-                   min-h-[41px] w-full rounded-lg px-4 py-3 shadow-none text-dark400_light900"
+                   text-dark400_light900 min-h-[41px] w-full rounded-lg px-4 py-3 shadow-none"
                   >
                     <span className="primary-text-gradient">Sign Up</span>
                   </Button>

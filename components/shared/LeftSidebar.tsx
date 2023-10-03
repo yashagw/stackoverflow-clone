@@ -13,11 +13,11 @@ const LeftSidebar = () => {
   return (
     <section
       className="custom-scrollbar background-light900_dark200 
-                sticky left-0 top-0 flex flex-col justify-between
-                 h-screen w-fit 
-                 overflow-y-auto p-6 pt-36
-                 light-border border-r shadow-light-300 dark:shadow-none
-                 lg:w-[266px] max-sm:hidden"
+                light-border sticky left-0 top-0 flex h-screen
+                 w-fit flex-col 
+                 justify-between overflow-y-auto border-r
+                 p-6 pt-36 shadow-light-300 dark:shadow-none
+                 max-sm:hidden lg:w-[266px]"
     >
       <div className="flex flex-1 flex-col gap-6">
         {sidebarLinks.map((item) => {
@@ -26,6 +26,7 @@ const LeftSidebar = () => {
             pathname === item.route;
           return (
             <Link
+              key={item.label}
               href={item.route}
               className={`${
                 isActive
@@ -57,7 +58,7 @@ const LeftSidebar = () => {
           <Link href="/sign-in">
             <Button
               className="small-medium btn-secondary 
-                  min-h-[41px] w-full rounded-lg px-4 py-3 shadow-none mb-2"
+                  mb-2 min-h-[41px] w-full rounded-lg px-4 py-3 shadow-none"
             >
               <span className="primary-text-gradient max-lg:hidden">
                 Log In
@@ -74,7 +75,7 @@ const LeftSidebar = () => {
           <Link href="/sign-up">
             <Button
               className="small-medium light-border-2 btn-tertiary
-                   min-h-[41px] w-full rounded-lg px-4 py-3 shadow-none text-dark400_light900"
+                   text-dark400_light900 min-h-[41px] w-full rounded-lg px-4 py-3 shadow-none"
             >
               <span className="primary-text-gradient max-lg:hidden">
                 Sign Up

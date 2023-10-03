@@ -2,7 +2,7 @@ import { Input } from "@/components/ui/input";
 import Image from "next/image";
 import React from "react";
 
-const GlobalSearch = () => {
+const GlobalSearchBar = () => {
   return (
     <div className="relative w-full max-w-[600px] max-lg:hidden">
       <div
@@ -28,4 +28,4 @@ const GlobalSearch = () => {
   );
 };
 
-export default GlobalSearch;
+export default GlobalSearchBar;
