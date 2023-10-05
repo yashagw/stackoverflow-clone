@@ -1,3 +1,4 @@
+import React from "react";
 import Navbar from "@/components/shared/navbar/Navbar";
 import LeftSidebar from "@/components/shared/LeftSidebar";
 import RightSidebar from "@/components/shared/RightSidebar";
@@ -9,7 +10,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <div className="flex">
         <LeftSidebar />
         <section className="flex min-h-screen flex-1 flex-col px-6 pb-6 pt-36 max-md:pb-14 sm:px-14">
-          <div className="mx-auto w-full mx-w-5xl">{children}</div>
+          <div className="mx-w-5xl mx-auto w-full">{children}</div>
         </section>
         <RightSidebar />
       </div>
