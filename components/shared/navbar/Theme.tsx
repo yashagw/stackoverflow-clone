@@ -20,7 +20,7 @@ const Theme = () => {
           className="focus:bg-light-900 data-[state=open]:bg-light-900
          dark:focus:bg-dark-200 dark:data-[state=open]:bg-dark-200"
         >
-          {mode == "light" ? (
+          {mode === "light" ? (
             <Image
               src="/assets/icons/sun.svg"
               width={20}
@@ -63,7 +63,7 @@ const Theme = () => {
                 className={`body-semibold text-light-500 ${
                   mode === item.value
                     ? "text-primary-500"
-                    : "text-dark10_light900"
+                    : "text-dark100_light900"
                 }`}
               >
                 {item.label}

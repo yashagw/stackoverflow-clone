@@ -34,7 +34,7 @@ const RightSidebar = () => {
   return (
     <section
       className="custom-scrollbar background-light900_dark200 
-      rigth-0 light-border sticky top-0 flex
+     light-border sticky top-0 flex
        h-screen w-[340px]
        flex-col overflow-y-auto border-l
        p-6 pt-36 shadow-light-300 dark:shadow-none
@@ -72,7 +72,7 @@ const RightSidebar = () => {
             return (
               <RenderTag
                 key={tag._id}
-                _id={tag._id}
+                _id={`${tag._id}`}
                 name={tag.name}
                 totalQuestions={tag.totalQuestion}
                 showCount
